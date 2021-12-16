@@ -2,7 +2,7 @@
 > ### **Support Discord** __**[Link](https://discord.gg/mTaHuK6BVa)**__
 
 # Stargate-Bukkit
-`NA`
+`Supporter Versions: NA`
 
 > PRE-ALPHA Development!<br>
 > There is no stable release at this time.<br>
