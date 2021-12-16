@@ -1,7 +1,7 @@
 > ### **Documentation:** __**[Link](https://github.com/stargate-bukkit/Stargate-Bukkit/wiki)**__<br>
 > ### **Support Discord** __**[Link](https://discord.gg/mTaHuK6BVa)**__
 
-# Stargate-Bukkit
+# Stargate-PMMP
 `Supporter Versions: NA`
 
 > PRE-ALPHA Development!<br>
