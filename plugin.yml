@@ -1,0 +1,237 @@
+---
+name: Stargate
+main: stargate_rewritten\Stargate\Plugin\Main
+version: 0.0.1
+author: stargate_rewritten
+# Written by Dinnerbone, Drakia, Thorin, Knarvik, & Pheotis.
+description: Stargate mod for PocketMine-MP
+website: https://discord.gg/mTaHuK6BVast
+api: 4.0.9
+src-namespace-prefix: stargate_rewritten\Stargate\io\github\stargate_rewritten\pmmp
+commands:
+  sg:
+    description: Used to reload the plugin. Console use only.
+    usage: /sg <reload | help | version>
+    permission: stargate.pmmp.admin.commandoverride
+permissions:
+  sg.pmmp.info.version:
+    description: "Displays the plugin's version in chat. (/sg version)"
+    default: true
+  sg.pmmp.info.help:
+    description: "Provides a link to the plugin's documentation. (/sg help)"
+    default: true
+  #sg.pmmp.admin.reload:
+    #description: "Reloads the plugin's config.yml (/sg reload)"
+    #default: op
+  #sg.pmmp.admin.bypass.private:
+    #description: "Can see and use others' private (P) gates."
+    #default: op
+  #sg.pmmp.admin.bypass.hidden:
+    #description: "Can see and use hidden gates on a network."
+    #default: op
+  #sg.pmmp.admin.bypass.hidden:
+    #description: "Can bypass the networkLimit specified in the config"
+    #default: op
+    # Note: a per-user gate limit will be configurable elsewhere.
+  #sg.pmmp.admin.bypass.cost.destroy:
+    #description: "Bypass the cost associated with destroying a portal"
+    #default: op
+  #sg.pmmp.admin.bypass.cost.create:
+    #description: "Bypass the cost associated with creating a portal"
+    #default: op
+  #sg.pmmp.admin.bypass.cost.use:
+    #description: "Bypass the cost associated with using a portal"
+    #default: op
+  #sg.pmmp.use.follow:
+    #description: "Even if they would otherwise lack permissions, users can use any gate that has been opened by a player with the perms needed to do so."
+    #default: true
+  #sg.pmmp.use.world:
+    #description: "Can use portals, regardless of the dimension within which they #exit."
+    #default: true
+    #sg.pmmp.use.world.<NAME> is a sub-node that allows for portals that exit in a #specified dimension to be used.
+  #sg.pmmp.use.network.custom:
+    #description: "Can use portals, if they are on any custom network."
+    #default: true
+    #sg.pmmp.use.network.custom.<NAME> is a sub-node that allows for portals on a specific (specified) custom network to be used.
+  #sg.pmmp.use.network.personal:
+    #description: "Can use portals if they are on one's personal (username) network."
+    #default: true
+  #sg.pmmp.use.network.default:
+    #description: "Can use portals if they are on the default (central) network."
+    #default: true
+  #sg.pmmp.use.type.a:
+    #description: "Can use always-on gates."
+    #default: true
+  #sg.pmmp.use.type.f:
+    #description: "Can use free gates."
+    #default: true
+  #sg.pmmp.use.type.h:
+    #description: "Can use hidden gates."
+    #default: true
+  #sg.pmmp.use.type.i:
+    #description: "Can use modern interserver gates."
+    #default: true
+  #sg.pmmp.use.type.n:
+    #description: "Can use hidden-network gates."
+    #default: true
+  #sg.pmmp.use.type.o:
+    #description: "Can use toggle gates."
+    #default: true
+  #sg.pmmp.use.type.p:
+    #description: "Can use private gates."
+    #default: true
+  #sg.pmmp.use.type.q:
+    #description: "Can use silent gates."
+    #default: true
+  #sg.pmmp.use.type.r:
+    #description: "Can use random gates."
+    #default: true
+  #sg.pmmp.use.type.s:
+    #description: "Can use force-shown gates."
+    #default: true
+  #sg.pmmp.use.type.t:
+    #description: "Can use terminal gates gates."
+    #default: true
+  #sg.pmmp.use.type.u:
+    #description: "Can use legacy bungee gates"
+    #default: true
+  #sg.pmmp.use.type.v:
+    #description: "Can use gates with invisible signs."
+    #default: true
+  #sg.pmmp.use.type.fixed:
+    #description: "Can use gates with a specified destination"
+    #default: true
+  #sg.pmmp.use.type.non-fixed:
+    #description: "Can use gates without a specified destination (networked gates)"
+    #default: true
+  #sg.pmmp.use.design:
+    #description: "Can use any portal, regardless of its portal's design (gatefile)."
+    #default: true
+    #sg.pmmp.use.design.<NAME>.gate is a sub-node that allows for portals of a specific gate file design to be used.
+  #sg.pmmp.create.world:
+    #description: "Can create portals in any dimension."
+    #default: op
+    #sg.create.world.<NAME> is a sub-node that allows for portals to be created in a specified world.
+  #sg.pmmp.create.network.custom:
+    #description: "Create portal on any custom network."
+    #default: op
+    #sg.pmmp.create.network.custom.<NAME> is a sub-node that allows for portals to be created on a specific (specified) custom network.
+  #sg.pmmp.create.network.personal:
+    #description: "Can create portals if they are on one's personal (username) network."
+    #default: op
+  #sg.pmmp.create.network.default:
+    #description: "Can create portals if they are on the default (central) network."
+    #default: op
+  #sg.pmmp.create.type.a:
+    #description: "Can create gates with the always-on flag."
+    #default: op
+  #sg.pmmp.create.type.b:
+    #description: "Can create gates with the backwards-facing flag."
+    #default: op
+  #sg.pmmp.create.type.f:
+    #description: "Can create gates with the free flag."
+    #default: op
+  #sg.pmmp.create.type.h:
+    #description: "Can create gates with the hidden flag."
+    #default: op
+  #sg.pmmp.create.type.i:
+    #description: "Can create gates with the modern interserver flag."
+    #default: op
+  #sg.pmmp.create.use.type.n:
+    #description: "Can create gates with the hidden-network flag.."
+    #default: op
+  #sg.pmmp.create.type.o:
+    #description: "Can create gates with the toggle flag."
+    #default: op
+  #sg.pmmp.create.type.p:
+    #description: "Can create gates with the private flag."
+    #default: op
+  #sg.pmmp.create.type.q:
+    #description: "Can create silent gates."
+    #default: op
+  #sg.pmmp.create.type.r:
+    #description: "Can create gates with the random flag."
+    #default: op
+  #sg.pmmp.create.type.s:
+    #description: "Can create gates with the force-shown flag."
+    #default: op
+  #sg.pmmp.create.type.t.new.default:
+    #description: "Can create (sell) a new terminal gate on the default terminal network."
+    #default: false
+  #sg.pmmp.create.type.t.new:
+    #description: "Can create (sell) a new terminal gate on any network they have access to."
+    #default: op
+  #sg.pmmp.create.type.t.connect.default:
+    #description: "Can create a gate connecting to any existing, available (for sale) terminal gate on the default network."
+    #default: op
+  #sg.pmmp.create.type.t.connect:
+    #description: "Can create a gate connecting to any existing, available (for sale) terminal gate. !!(BYPASSES stargate.create.network)!!"
+    #default: op
+  #sg.pmmp.create.type.u:
+    #description: "Can create gates with the legacy bungee flag."
+    #default: op
+  #sg.pmmp.create.design:
+    #description: "Can create any portal, regardless of the design (gatefile)"
+    #default: op
+    #sg.pmmp.create.design.<NAME>.gate is a sub-node that allows for portals of a specific gate file design to be created.
+  #sg.pmmp.destroy.world:
+    #description: "Can destroy portals in any dimension."
+    #default: op
+    #sg.create.world.<NAME> is a sub-node that allows for portals to be destroyed in a specified world.
+  #sg.pmmp.destroy.network.custom:
+    #description: "Create destroy portals on any custom network."
+    #default: op
+    #sg.pmmp.create.network.custom.<NAME> is a sub-node that allows for portals to be created on a specific (specified) custom network.
+  #sg.pmmp.destroy.network.personal:
+    #description: "Can destroy portals if they are on one's personal (username) network."
+    #default: op
+  #sg.pmmp.destroy.network.default:
+    #description: "Can destroy portals if they are on the default (central) network."
+    #default: op
+  #sg.pmmp.destroy.type.a:
+    #description: "Can destroy gates with the always-on flag."
+    #default: op
+  #sg.pmmp.destroy.type.b:
+    #description: "Can destroy gates with the backwards-facing flag."
+    #default: op
+  #sg.pmmp.destroy.type.f:
+    #description: "Can destroy gates with the free flag."
+    #default: op
+  #sg.pmmp.destroy.type.h:
+    #description: "Can destroy gates with the hidden flag."
+    #default: op
+  #sg.pmmp.destroy.type.i:
+    #description: "Can destroy gates with the modern interserver flag."
+    #default: op
+  #sg.pmmp.destroy.use.type.n:
+    #description: "Can destroy gates with the hidden-network flag.."
+    #default: op
+  #sg.pmmp.destroy.type.o:
+    #description: "Can destroy gates with the toggle flag."
+    #default: op
+  #sg.pmmp.destroy.type.p:
+    #description: "Can destroy gates with the private flag."
+    #default: op
+  #sg.pmmp.destroy.type.q:
+    #description: "Can destroy silent gates."
+    #default: op
+  #sg.pmmp.destroy.type.r:
+    #description: "Can destroy gates with the random flag."
+    #default: op
+  #sg.pmmp.destroy.type.s:
+    #description: "Can destroy gates with the force-shown flag."
+    #default: op
+  #sg.pmmp.destroy.type.t:
+    #description: "Can destroy gates with the terminal flag."
+    #default: op
+  #sg.pmmp.destroy.type.u:
+    #description: "Can destroy gates with the legacy bungee flag."
+    #default: op
+  #sg.pmmp.destroy.type.v:
+    #description: "Can destroy gates with invisible signs."
+    #default: op
+  #sg.pmmp.destroy.design:
+    #description: "Can destroy portals, regardless of design (gatefile)"
+    #default: op
+    #sg.pmmp.destroy.design.<NAME>.gate is a sub-node that allows for portals of a specific gate file design to be destroyed.
+...
