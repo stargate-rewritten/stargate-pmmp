@@ -10,9 +10,9 @@ commands:
   sg:
     description: Used to reload the plugin. Console use only.
     usage: /sg <reload | help | version>
-    permission: sg.pmmp.admin.commandoverride
+    permission: sg.pmmp.command
 permissions:
-  sg.pmmp.admin.commandoverride:
+  sg.pmmp.command:
     description: "Permission to use the /sg command (but not its subnodes)."
     default: true
   sg.pmmp.info.version:
