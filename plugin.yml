@@ -1,7 +1,7 @@
 ---
 name: Stargate
-main: Stargate\Plugin\Main
-version: 0.0.2
+main: Stargate\Stargate
+version: 0.0.3
 author: [Dinnerbone, Drakia, Thorin, Knarvik, Pheotis]
 description: Stargate mod for PocketMine-MP
 website: https://discord.gg/mTaHuK6BVast
