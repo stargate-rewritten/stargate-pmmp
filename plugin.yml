@@ -1,19 +1,21 @@
 ---
 name: Stargate
-main: stargate_rewritten\Stargate\Plugin\Main
-version: 0.0.1
+main: Stargate\Plugin\Main
+version: 0.0.2
 author: stargate_rewritten
 # Written by Dinnerbone, Drakia, Thorin, Knarvik, & Pheotis.
 description: Stargate mod for PocketMine-MP
 website: https://discord.gg/mTaHuK6BVast
 api: 4.0.9
-src-namespace-prefix: stargate_rewritten\Stargate\io\github\stargate_rewritten\pmmp
 commands:
   sg:
     description: Used to reload the plugin. Console use only.
     usage: /sg <reload | help | version>
-    permission: stargate.pmmp.admin.commandoverride
+    permission: sg.pmmp.admin.commandoverride
 permissions:
+  sg.pmmp.admin.commandoverride:
+    description: "Permission to use the /sg command (but not its subnodes)."
+    default: true
   sg.pmmp.info.version:
     description: "Displays the plugin's version in chat. (/sg version)"
     default: true

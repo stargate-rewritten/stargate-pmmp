@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace stargate_rewritten\Stargate\Plugin;
+namespace Stargate\Plugin;
 
 use pocketmine\plugin\PluginBase;
 
